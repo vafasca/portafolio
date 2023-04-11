@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BiographyRoutingModule } from './biography-routing.module';
 import { BiographyComponent } from './biography.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { BiographyComponent } from './biography.component';
   ],
   imports: [
     CommonModule,
-    BiographyRoutingModule
+    BiographyRoutingModule,
+    SharedModule
   ]
 })
 export class BiographyModule { }
