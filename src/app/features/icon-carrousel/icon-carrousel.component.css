@@ -1,0 +1,49 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  background: url("../../../assets/images/icon_fondo.jpg") no-repeat center
+    fixed;
+}
+
+.carousel-container {
+  display: flex;
+  animation: slide 15s linear infinite;
+  justify-content: flex-start;
+  perspective: 1000px; /* Agregar perspectiva 3D */
+}
+
+.icon {
+  flex-shrink: 0;
+  height: 150px;
+  margin-right: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agregar sombra */
+  transform-style: preserve-3d; /* Mantener el efecto 3D */
+}
+
+img {
+  height: 150px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  25% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.titulo {
+  text-align: center;
+  font-size: 2em; /* 2 veces el tamaño por defecto */
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+}

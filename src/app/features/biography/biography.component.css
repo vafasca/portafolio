@@ -1,15 +1,36 @@
-header app-header, main, footer app-footer {
-    background-image: url('../../../assets/images/231777.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+main{
+  display: flex;
+  flex-direction: column;
+}
 
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* establece un valor negativo para enviar la imagen al fondo */
-  }
-  
+app-about{
+  background-image: url('../../../assets/images/fondoaa.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex: 1;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: aliceblue;
+  background-image: url('../../../assets/images/fondoaa2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+app-header{
+  flex: 1;
+}
+footer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+app-footer{
+  flex: 1;
+}
+
