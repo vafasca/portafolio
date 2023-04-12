@@ -38,12 +38,21 @@ nav a:hover {
 }
 
 .name {
-	font-size: 28px;
+	font-size: 38px;
 	font-weight: bold;
 	text-align: center;
 	margin-top: 20px;
 	text-transform: uppercase;
+	background-image: linear-gradient(to bottom, #e4e00d 50%, #eb0c0c 50%);
+	background-size: 100% 200%; /* para hacer que la mitad superior tenga el color #ff9900 y la mitad inferior el color #ffcc00 */
+	-webkit-background-clip: text; /* para aplicar el gradiente sólo al texto */
+	-webkit-text-fill-color: transparent; /* para hacer que el texto sea transparente, revelando el gradiente detrás de él */
 }
+.name span {
+	font-size: 2rem;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(184, 53, 53, 0.5);
+  }
 
 /* Estilos para pantallas más pequeñas */
 @media (max-width: 768px) {
@@ -61,10 +70,5 @@ nav a:hover {
 	.logo {
 		order: 2;
 		margin-bottom: 10px;
-	}
-	
-	.name {
-		font-size: 20px;
-		margin-top: 10px;
 	}
 }

@@ -16,7 +16,7 @@
   flex-shrink: 0;
   height: 150px;
   margin-right: 40px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Agregar sombra */
+
   transform-style: preserve-3d; /* Mantener el efecto 3D */
 }
 
