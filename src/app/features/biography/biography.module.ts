@@ -8,6 +8,8 @@ import { AboutComponent } from '../about/about.component';
 import { IconCarrouselComponent } from '../icon-carrousel/icon-carrousel.component';
 import { ProjectsComponent } from '../projects/projects.component';
 
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+
 @NgModule({
   declarations: [
     BiographyComponent,
@@ -18,7 +20,8 @@ import { ProjectsComponent } from '../projects/projects.component';
   imports: [
     CommonModule,
     BiographyRoutingModule,
-    SharedModule
+    SharedModule,
+    TooltipModule
   ]
 })
 export class BiographyModule { }
