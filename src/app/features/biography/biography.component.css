@@ -10,20 +10,6 @@ app-about{
   background-attachment: fixed;
   flex: 1;
 }
-
-header{
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  background-color: rgb(9, 118, 212);
-  background-image: url('../../../assets/images/fondoaa2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-app-header{
-  flex: 1;
-}
 footer{
   display: flex;
   width: 100%;

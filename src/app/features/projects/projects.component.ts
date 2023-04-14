@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -6,6 +6,8 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
   styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent implements OnInit {
+
+  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
 
   constructor() { }
 
