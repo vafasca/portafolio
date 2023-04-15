@@ -1,20 +1,11 @@
-.example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-  :host{
-    background-color: blue; /* o background-image: url('ruta/de/la/imagen.jpg') */
+section.projects{
+    /*background-color: blue;  o background-image: url('ruta/de/la/imagen.jpg') 
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
-    /* Otros estilos del elemento hijo */
-}
-  /* button.mat-button:hover {
-    background-color: #8B0000;
-    color: white;
-  } */
-  
+    padding-left: 20px;*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }

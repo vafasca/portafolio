@@ -15,8 +15,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 //Angular Material Style
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { ItemProjectComponent } from './item-project/item-project.component';
 
 @NgModule({
