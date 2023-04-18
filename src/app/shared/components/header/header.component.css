@@ -22,9 +22,9 @@ body{
 
 .logo {
 	font-size: 28px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	text-align: center;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 }
 .logo img {
     max-height: 100px;
@@ -45,6 +45,10 @@ nav a {
 
 nav a:hover {
 	border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.nav2 a {
+	font-size: 30px;
 }
 
 .name {
@@ -75,6 +79,11 @@ nav a:hover {
 	nav {
 		order: 3;
 		margin-top: 10px;
+		text-align: center;
+	}
+	nav a {
+		margin: 0 auto; /* agregar esta línea para centrar los enlaces */
+		font-size: 15px;
 	}
 	
 	.logo {
