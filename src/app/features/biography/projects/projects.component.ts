@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpenaiService } from 'src/app/shared/services/openai.service';
 interface Proyecto {
   titulo: string;
   subtitulo: string;
@@ -20,7 +21,18 @@ export class ProjectsComponent implements OnInit {
     { titulo: 'proyecto 5', subtitulo: 'subtitulo 5', url: 'imagen5' }
   ];
 
-  constructor() {}
+  constructor(private openaiService: OpenaiService) {}
 
-  ngOnInit(): void {}
+  prompt = 'Generame una descipcion para vender un pastel de manzana hecho en casa';
+  model = 'text-davinci-003';
+  maxTokens = 100;
+
+  getCompletion() {
+    this.openaiService.getCompletion(this.prompt, this.model, this.maxTokens)
+      .subscribe(response => console.log(response.choices[0].text));
+  }
+
+  ngOnInit(): void {
+    this.getCompletion()
+  }
 }
