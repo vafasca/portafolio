@@ -14,15 +14,15 @@ export class OpenaiService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     })
   };
 
-  getCompletion(prompt: string, model: string, maxTokens: number): Observable<any> {
+  getCompletion(prompt: string): Observable<any> {
     const data = {
       prompt: prompt,
-      model: model,
-      max_tokens: maxTokens
+      model: 'text-davinci-003',
+      max_tokens: 100
     };
     const url = 'https://api.openai.com/v1/completions';
     return this.http.post<any>(url, data, this.httpOptions);

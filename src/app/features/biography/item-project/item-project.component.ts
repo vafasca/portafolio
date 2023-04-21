@@ -1,10 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-interface Proyecto {
-  titulo: string;
-  subtitulo: string;
-  url: string;
-}
+import { Proyectos } from 'src/app/shared/models/proyecto.interface';
 
 @Component({
   selector: 'app-item-project',
@@ -14,9 +9,9 @@ interface Proyecto {
 export class ItemProjectComponent implements OnInit {
   
 
-  @Input() listaProyectos!: Proyecto;
+  @Input() listaProyectos!: Proyectos;
 
-  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  defaultImage = "https://images.unsplash.com/photo-1437818628339-19ded67ade8e?fm=jpg";
 
   constructor() { }
 

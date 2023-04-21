@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BiographyRoutingModule } from './biography-routing.module';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 //Modules
 import { SharedModule } from 'src/app/shared/shared.module';
@@ -33,7 +34,8 @@ import { ItemProjectComponent } from './item-project/item-project.component';
     SharedModule,
     NgbCarouselModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    LazyLoadImageModule
   ]
 })
 export class BiographyModule { }

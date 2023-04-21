@@ -1,7 +1,7 @@
 .carousel {
   width: 100%;
   overflow: hidden;
-  background: url("../../../assets/images/icon_fondo.jpg") no-repeat center
+  background: url("../../../../assets/images/icon_fondo.jpg") no-repeat center
     fixed;
 }
 

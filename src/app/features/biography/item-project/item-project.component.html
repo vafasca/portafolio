@@ -4,19 +4,19 @@
       <mat-card-subtitle>{{listaProyectos.subtitulo}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <ngb-carousel *ngIf="images">
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[0]" alt="Random first slide" />
+      <ngb-carousel >
+        <ng-template ngbSlide *ngFor="let item of listaProyectos.url; let i = index">
+          <div class="picsum-img-wrapper" style="width: 366px; height: 500px;">
+            <img [lazyLoad]="item" [useSrcset]="true" [defaultImage]="defaultImage" alt="Random first slide" style="width: 100%; height: 100%;" />
           </div>
           <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Slide {{i+1}}</h3>
+            <p>{{listaProyectos.description}} {{i+1}}</p>
           </div>
         </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[1]" alt="Random second slide" />
+        <!-- <ng-template ngbSlide>
+          <div class="picsum-img-wrapper" style="width: 366px; height: 500px;">
+            <img [lazyLoad]='listaProyectos.url[1]' [useSrcset]="true" [defaultImage]="defaultImage" alt="Random second slide" style="width: 100%; height: 100%;" />
           </div>
           <div class="carousel-caption">
             <h3>Second slide label</h3>
@@ -24,14 +24,14 @@
           </div>
         </ng-template>
         <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[2]" alt="Random third slide" />
+          <div class="picsum-img-wrapper" style="width: 366px; height: 500px;">
+            <img [lazyLoad]="listaProyectos.url[0]" [useSrcset]="true" [defaultImage]="defaultImage" alt="Random third slide" style="width: 100%; height: 100%;" />
           </div>
           <div class="carousel-caption">
             <h3>Third slide label</h3>
             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
           </div>
-        </ng-template>
+        </ng-template> -->
       </ngb-carousel>
     </mat-card-content>
   </mat-card>
