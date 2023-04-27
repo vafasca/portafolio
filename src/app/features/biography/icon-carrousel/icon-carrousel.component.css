@@ -24,26 +24,4 @@ img {
   height: 150px;
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(-100%);
-  }
-  25% {
-    transform: translateX(-50%);
-  }
-  50% {
-    transform: translateX(0%);
-  }
-  75% {
-    transform: translateX(50%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-.titulo {
-  text-align: center;
-  font-size: 2em; /* 2 veces el tamaño por defecto */
-  text-transform: uppercase;
-  text-shadow: 1px 1px 1px black;
-}
+
