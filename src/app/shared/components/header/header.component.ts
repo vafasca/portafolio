@@ -12,6 +12,7 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 })
 export class HeaderComponent implements OnInit {
 
+  imagenBackground = '../../../../assets/images/fondoaa2.jpg';
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faYoutube = faYoutube;
