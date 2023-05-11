@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { BiographyRoutingModule } from './biography-routing.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 
+//voice
+import { SpeechService } from 'src/app/shared/services/speech.service';
 //Modules
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -36,6 +38,7 @@ import { ItemProjectComponent } from './item-project/item-project.component';
     MatCardModule,
     MatButtonModule,
     LazyLoadImageModule
-  ]
+  ],
+  providers: [SpeechService],
 })
 export class BiographyModule { }

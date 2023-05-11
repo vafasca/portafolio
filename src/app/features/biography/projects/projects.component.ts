@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { OpenaiService } from 'src/app/shared/services/openai.service';
 import { Proyectos } from 'src/app/shared/models/proyecto.interface';
+import { SpeechService } from 'src/app/shared/services/speech.service';
+
 
 
 @Component({
@@ -17,18 +19,66 @@ export class ProjectsComponent implements OnInit {
     { titulo: 'proyecto 4', subtitulo: 'subtitulo 4', description: 'Description', url: ['https://images.unsplash.com/photo-1599198688091-926a8df3c9be', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjyp4XfQYqvBzhGc4GfikV2dRWii0iasZAIQZ2-KAZCztOibNOv_7aRBL5cmz1G6vHdEM&usqp=CAU']}
   ];
 
-  constructor(private openaiService: OpenaiService) {}
+  prompt!: any;
 
-  prompt = 'Genera una descripcion corta para un proyecto en mi potafolio';
+  speechSynthesisUtterance: SpeechSynthesisUtterance;
+  responde!: any;
+  constructor(
+    private openaiService: OpenaiService,
+    private speechService: SpeechService) {
+    this.speechSynthesisUtterance = new SpeechSynthesisUtterance();
+  }
+  startListening() {
+    this.speechService.recognition.lang = 'es-ES';
+    this.speechService.recognition.onresult = (event: { results: { transcript: any; }[][]; }) => {
+      const transcript = event.results[0][0].transcript;
+      console.log('Texto transcrito:', transcript);
+
+      const firstWord = transcript.replace(/[^\w\s]|_/g, "").trim().split(' ')[0];
+      if (firstWord.toLowerCase() === 'alejandro') {
+      this.getCompletion(transcript);
+      console.log('Transcript completo:', transcript);
+    }
+      //this.getCompletion(transcript);
+      //this.processTranscript(transcript);
+    };
+    
+    this.speechService.recognition.onend = () => {
+      //this.startListening(); // Reiniciar el reconocimiento de voz después de una pausa
+    };
+    this.speechService.recognition.start();
+  }
+  
+  // processTranscript(transcript: string) {
+  //   // Aquí puedes realizar cualquier lógica de procesamiento con el texto transcrito
+  //   // Por ejemplo, enviarlo a un servidor, mostrarlo en la interfaz, etc.
+  //   // También puedes llamar a otros servicios o componentes para realizar acciones adicionales
+  //   console.log('Procesando texto:', transcript);
+  //   //this.getCompletion(transcript)
+  // }
+  
+  prompt_intro =  "Nombre: Alejandro. \n Profesión de Alejandro: Asistente virtual, para la pagina web que es el portafolio de Bruno Ortiz. \nProfesion de Bruno Ortiz: Ingeniero de Sistemas \nPersonalidad de Bruno Ortiz: Sarcastico y gracioso. \nPasatiempos de Bruno Ortiz: Los 2 unicos pasatiempos son Jugar a Dota 2 y leer novelas \nEdad de Alejandro: 18 anios. \nEdad de Bruno Ortiz: 28 anios";
   // model = 'text-davinci-003';
   // maxTokens = 100;
 
-  getCompletion() {
-    this.openaiService.getCompletion(this.prompt)
-      .subscribe(response => response.choices[0].text);
+  getCompletion(prompt: any) {
+    console.log("estooooooo recibo yo:"+prompt);
+    this.openaiService.getCompletion(this.prompt_intro+prompt)
+      .subscribe(response => {
+        this.responde = response.choices[0].text
+        //alert(response.choices[0].text)
+        this.speak(this.responde);
+      });
+  }
+  speak(text: string) {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'es-ES';
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
   }
 
   ngOnInit(): void {
     //this.getCompletion()
+    this.startListening();
   }
 }

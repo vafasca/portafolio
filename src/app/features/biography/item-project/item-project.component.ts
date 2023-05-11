@@ -13,7 +13,10 @@ export class ItemProjectComponent implements OnInit {
 
   defaultImage = "https://images.unsplash.com/photo-1437818628339-19ded67ade8e?fm=jpg";
 
-  constructor() { }
+  constructor() {
+   }
+   
+  
 
   ngOnInit(): void {
   }

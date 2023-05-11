@@ -14,7 +14,7 @@ export class OpenaiService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Authorization': 'Bearer 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'
+
     })
   };
 
