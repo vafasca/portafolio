@@ -1,0 +1,93 @@
+{
+    "informacionPersonal": [
+      {
+        "id": 1,
+        "descripcionInformacion": "La informacion que se proporciona es informacion personal de Bruno Ortiz",
+        "nombre": "Bruno Alejandro",
+        "apellido": "Ortiz Velasquez",
+        "profesion": "Ingenieria de Sistemas",
+        "fechaNacimiento": "13 de mayo de 1995",
+        "hobbie": ["Aprender acerca de IAs", "Jugar video juegos"],
+        "descripcionPersonal": "Soy una persona perseverante alegre y colaborativo",
+        "hardSkill": "Conocimiento de HTML, CSS, Javascript, Angular 12, Spring Boot, NodeJs, Java",
+        "softSkill": "Trabajo en equipo, proactivo, resolucion de problemas",
+        "experienciaProfesional": "Experiencia realizando proyectos personales de manera profesional con buenas practicas",
+        "nacionalidad": "Peruana",
+        "personalidad": ["Alegre,", "Divertido", "Sociable"],
+        "universidad": "Universidad Mayor de San Simon",
+        "colegio": "Betesda School",
+        "creencias": "Cristiana",
+        "metas": "Desarrollar una aplicacion exitosa utilizando la inteligencia artifical",
+        "familia": ["Madre", "Padre", "Hermano", "Hermana"],
+        "lugarResidencia": "cochabamba-Bolivia"
+      }
+    ],
+    "proyectosPersonales": [
+      {
+        "id": 1,
+        "titulo": "Portafolio Web",
+        "subtitulo": "Portafolio Web con asistente virtual",
+        "descripcionProyecto": "El objetivo principal del es presentar de manera efectiva las capacidades y el talento campo profesional",
+        "imagenProyecto": ["https://images.unsplash.com/photo-1581789164394-810293cd79ce","https://m.media-amazon.com/images/I/91t2ISLcxdL.jpg","https://e0.pxfuel.com/wallpapers/935/242/desktop-wallpaper-oneplus-6-neversettle-oneplus-oneplus6-oneplus6t-wallpa-fondo-de-pantalla-oscuros-fondo-de-pantalla-de-supreme-fondo-de-pantalla-de-tecnologia-oneplus-dark-thumbnail.jpg"],
+        "introduccionProyecto": "Este proyecto fue desarrollado con la finalidad de mostrar las capacidades de Bruno Ortiz para hacer uso de la IA y conocimiento de las tecnologias usadas",
+        "tecnologiasUsadas": ["Angular 12", "API openai", "Boostrap", "Angular Material", "FontAwaysome"]
+      },
+      {
+        "id": 2,
+        "titulo": "Tienda en línea",
+        "subtitulo": "Plataforma de comercio electrónico",
+        "descripcionProyecto": "Este proyecto tiene como objetivo principal crear una tienda en línea para vender productos de diversas categorías.",
+        "imagenProyecto": ["https://images.unsplash.com/photo-1510172951999-856a654063f4","https://images.unsplash.com/photo-1529243856184-3a8211025596","https://images.unsplash.com/photo-1531123897723-6218be948f9d"],
+        "introduccionProyecto": "La tienda en línea permitirá a los usuarios explorar y comprar una amplia gama de productos de manera conveniente desde cualquier lugar.",
+        "tecnologiasUsadas": ["React.js", "Node.js", "MongoDB", "Stripe", "CSS"]
+      },
+      {
+        "id": 3,
+        "titulo": "Aplicación móvil de fitness",
+        "subtitulo": "Entrenamiento personalizado en tu bolsillo",
+        "descripcionProyecto": "El objetivo principal de esta aplicación móvil es proporcionar a los usuarios un programa de entrenamiento personalizado y seguimiento de su progreso físico.",
+        "imagenProyecto": ["https://images.unsplash.com/photo-1528826514345-7602c6e06f01","https://images.unsplash.com/photo-1564558329293-919a692e4fc1","https://images.unsplash.com/photo-1568688220143-2d50f6a3ad6b"],
+        "introduccionProyecto": "La aplicación permitirá a los usuarios acceder a rutinas de ejercicios, recibir recomendaciones personalizadas y realizar un seguimiento de su progreso en tiempo real.",
+        "tecnologiasUsadas": ["React Native", "Firebase", "Redux", "Expo", "GraphQL"]
+      },
+      {
+        "id": 4,
+        "titulo": "Plataforma de aprendizaje en línea",
+        "subtitulo": "Educación a tu propio ritmo",
+        "descripcionProyecto": "Este proyecto tiene como objetivo crear una plataforma en línea que brinde cursos y recursos educativos para el aprendizaje en línea.",
+        "imagenProyecto": ["https://images.unsplash.com/photo-1536510344781-8faca9a560f0","https://images.unsplash.com/photo-1503676260728-1c00da094a0b","https://images.unsplash.com/photo-1544722673-4e3b21d0b4c4"],
+        "introduccionProyecto": "La plataforma permitirá a los usuarios acceder a cursos en línea, realizar evaluaciones y realizar un seguimiento de su progreso educativo.",
+        "tecnologiasUsadas": ["Ruby on Rails", "PostgreSQL", "React.js", "AWS", "RESTful API"]
+      } 
+    ],
+    "portafolio": [
+      {
+        "id": 1,
+        "descripcionInformacion": "La informacion que se proporciona es informacion sobre esta pagina web que es el portafolio de Bruno Ortiz",
+        "introduccionPortafolio": "",
+        "estructuraPortafolio": ["Acerca de mi", "Tecnologias", "Proyectos"],
+        "tecnologiasUsadas": ["Angular 12", "API openai"],
+        "propositoPortafolio": "Proporcionar informacion de Bruno Ortiz y guia hablada por un asistente virtual",
+        "Alcance": "Proporcionar de manera eficiente informacion unica proporcionada al asistente, con una propia IA desarrollada"
+      }
+    ],
+    "asistenteVirtual": [
+      {
+        "id": 1,
+        "descripcionInformacion": "La informacion que se proporciona es informacion sobre el bot (asistente virtual)",
+        "nombreBot": "Alebot",
+        "proposito": "Brindar informacion acerca de Bruno Ortiz y guiar en el portafolio con informacion unica y exlusiva que se le brinda",
+        "rolBot": "Asistente virtual",
+        "personalidadBot": ["Alegre", "Sarcastico", "Bromista"],
+        "fechaCreacion": "Abril 2023"
+      }
+    ],
+    "limitacionBot": [
+      {
+        "id": 1,
+        "descripcionInformacion": "La informacion que se proporciona es informacion sobre las limitaciones del bot",
+        "permisosBot": "Solo y unicamente responderas a informacion que se te proporciona",
+        "alcanceRespuesta": "El alcance de tus respuesta se limnitara a la informacion proporcionada tomando en cuenta la personalidad del bot"
+      }
+    ]
+  }
