@@ -1,6 +1,6 @@
 export interface Proyectos{
     titulo: string;
     subtitulo: string;
-    url: any;
+    url: string[];
     descripcionProyecto: string;
 }

@@ -40,8 +40,9 @@ export class ProjectsComponent implements OnInit {
     });
   }
   getInfo(info: string){
-    this.infoService.getInfo(info).subscribe((data) => {
-      this.objeto = data[0];
+    this.infoService.getInfo(info).subscribe((data: Proyectos[]) => {
+      console.log("dataaa: "+JSON.stringify(data[1]))
+      this.objeto = data;
     });
   }
 
@@ -52,7 +53,7 @@ export class ProjectsComponent implements OnInit {
       console.log('Texto transcrito:', transcript);
         this.historialRespuestas.push(transcript)
         console.log(this.historialRespuestas);
-        this.prompt_history = `Este es el historial de conversacion: ${this.historialRespuestas}`;
+        this.prompt_history = `Para responder ten en cuenta este es el historial de conversacion empezando por lo ultimo guardado: ${this.historialRespuestas}`;
       this.getCompletion(transcript);//al api la pregunta
       console.log('Transcript completo:', transcript);
 
@@ -96,7 +97,7 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getProyectos();
-    this.getInfo('limitacionBot');
+    this.getInfo('proyectosPersonales');
     this.startListening();
   }
 }
